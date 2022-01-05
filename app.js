@@ -13,6 +13,14 @@ app.get("/", function(req, res){
     res.render("index");
 });
 
+app.get("/cart", (req, res) => {
+    res.render("cart")
+})
+
+app.get("/checkout", (req, res) => {
+    res.render("checkout")
+})
+
 app.get("/register", (req, res)=>{
 
     res.render("register")
@@ -22,6 +30,7 @@ app.get("/login", (req,res)=>{
 
     res.render("login")
 })
+
 
 
 

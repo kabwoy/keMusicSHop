@@ -1,0 +1,67 @@
+<%- include ("partials/header") %>
+
+<!-- navbar -->
+<%- include ("partials/usernav") %>
+<!-- /navbar -->
+
+    <div class="container">
+       <div class="items">
+           <h1>Cart(5 items)</h1>
+       </div>
+
+        <br>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="images/music.jpg" alt="..." class="thumbnail-cart">
+                        </td>
+                        <td>Trio Mio</td>
+                        <td>Cheza Kama Wewe</td>
+                        <td>Ksh.200</td>
+                        <td>3</td>
+                        <td>Ksh.600</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/music.jpg" alt="..." class="thumbnail-cart">
+                        </td>
+                        <td>Trio Mio</td>
+                        <td>Cheza Kama Wewe</td>
+                        <td>Ksh.200</td>
+                        <td>2</td>
+                        <td>Ksh.400</td>
+                    </tr>
+                </tbody>
+            </table>
+           
+        </div>
+         <!-- checkout button -->
+         <div class="check-btn">
+            <h3>Total: Ksh.1000</h3>
+            <hr>
+            <div class="row">
+                <div class="col-auto">
+                    <a href="/" class="btn btn-warning">&#8592; Continue Shopping</a>
+                </div>
+                <div class="col-auto">
+                    <a href="/checkout" class="btn btn-primary">Proceed to Checkout &#8594;</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <%- include ("partials/footer") %>
