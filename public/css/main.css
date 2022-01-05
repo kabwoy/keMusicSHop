@@ -1,0 +1,44 @@
+.container {
+    margin: 90px auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p, span, h5, h4 {
+    font-family: 'Dosis', sans-serif;
+}
+
+.product {
+    margin-top: 30px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 250px;
+}
+
+.box-element {
+    width: 100%;
+    /* border: 1px solid green; */
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    margin: 0;
+    padding: 0;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.btn:focus {
+    box-sizing: none;
+}
