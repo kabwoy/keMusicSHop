@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 .container {
     margin: 90px auto;
 }
 
 h1, h2, h3 {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Playfair Display', serif;
     padding: 0;
     margin: 0;
 }
