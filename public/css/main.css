@@ -42,3 +42,23 @@ p, span, h5, h4 {
 .btn:focus {
     box-sizing: none;
 }
+
+.register-container {
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.register-container form {
+    /* border: 1px solid white; */
+    padding: 10px;
+    width: 500px;
+    margin: 4px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form .form-group {
+    margin: 10px auto;
+}
