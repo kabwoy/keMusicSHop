@@ -30,6 +30,10 @@ app.get("/login", (req,res)=>{
 
     res.render("login")
 })
+app.get("/uploads", (req,res)=>{
+
+    res.render("uploads")
+})
 
 
 
