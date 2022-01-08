@@ -82,3 +82,28 @@ form .form-group {
     cursor: pointer;
     margin-left: 10px;
 }
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn-social {
+    margin: 5px;
+}
+
+.btn-google {
+    background-color: #DD4B39;
+}
+
+.btn-facebook {
+    background-color: #3B5998;
+}
+
+.social-card {
+    width: 400px;
+    margin: 0 auto;
+}

@@ -1,0 +1,131 @@
+<%- include ("partials/header") %>
+
+<!-- navbar -->
+<% if(!currentUser){ %>
+    <%- include ("partials/noneusernav") %>
+    <% } else { %>
+    <%- include ("partials/usernav") %>
+    <% } %>
+    <!-- /navbar -->
+
+<div class="container">
+    <!-- search engine -->
+    <div class="col-lg-8">
+        <%- include ("partials/searchengine") %>
+    </div>
+    <!-- search engine -->
+
+    <br>
+    <!-- product rows and columns -->
+    <div class="row">
+        <div class="col-lg-4 product">
+            <!-- artist name -->
+            <div class="box-element">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col"><a href="/" class="text-info disabled">
+                                <h3>Trio Mio</h3>
+                            </a></div>
+                        <div class="col-lg-4 align-items-center">
+                            <h5>4 Jan 2021</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /artistname -->
+            <img class="thumbnail" src="images/music.jpg" alt="">
+            <div class="box-element">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5>cheza Kama Wewe</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Ksh.200</h5>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <a href="" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                        <a href="" style="margin-left: 4px;" class="btn btn-outline-info"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 product">
+            <!-- artist name -->
+            <div class="box-element">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col"><a href="/" class="text-info disabled">
+                                <h3>Trio Mio</h3>
+                            </a></div>
+                        <div class="col-lg-4 align-items-center">
+                            <h5>4 Jan 2021</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /artistname -->
+            <img class="thumbnail" src="images/music1.jpg" alt="">
+            <div class="box-element">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5>cheza Kama Wewe</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Ksh.200</h5>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <a href="" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                        <a href="" style="margin-left: 4px;" class="btn btn-outline-info"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 product">
+            <!-- artist name -->
+            <div class="box-element">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col"><a href="/" class="text-info disabled">
+                                <h3>Trio Mio</h3>
+                            </a></div>
+                        <div class="col-lg-4 align-items-center">
+                            <h5>4 Jan 2021</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /artistname -->
+            <img class="thumbnail" src="images/music.jpg" alt="">
+            <div class="box-element">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5>cheza Kama Wewe</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Ksh.200</h5>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <a href="" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                        <a href="" style="margin-left: 4px;" class="btn btn-outline-info"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /product rows and columns -->
+    </div>
+
+    <%- include ("partials/footer") %>

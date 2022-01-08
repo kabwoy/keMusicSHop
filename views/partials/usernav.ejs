@@ -23,10 +23,7 @@
                     <a class="nav-link" href="#">Trending</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/register">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/uploads">Upload</a>
+                    <a class="nav-link" href="#">Free Download</a>
                 </li>
             </ul>
             <!-- Left links -->
@@ -34,14 +31,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">
-                        Antony Mwangi
+                        <%= currentUser.username %> 
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item text-success" href="/checkout">Checkout</a>
                         <a class="dropdown-item text-success" href="#">My Profile</a>
                         <a class="dropdown-item text-success" href="#">Settings</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Log Out</a>
+                        <a class="dropdown-item text-danger" href="/logout">Log Out</a>
                     </div>
                 </li>
             </ul>

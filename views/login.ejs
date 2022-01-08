@@ -1,25 +1,44 @@
-<%- include ("partials/header") %> 
-    <div class="container register-container">
-        <div class="row">
-            <h1 class="text-center">Login</h1>
-            <form action="" class="register-form">
-                <div class="col-lg-10 col-md-10">
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="username">
-                    </div>
-                </div>
+<%- include ("partials/header") %>
 
-                <div class="col-lg-10 col-md-10">
-                    <div class="form-group">
-                        <input class="form-control form-control-md" type="password" placeholder="password">
-                    </div>
-                </div>
+<!-- navbar -->
+<%- include ("partials/noneusernav") %>
+<!-- /navbar -->
 
-                <button type="submit" class="btn btn-success" style="margin-top: 10px;">Login</button>
+<div class="container register-container">
 
-                <p style="padding-top: 10px;">Dont Have An Account? <a href="/register">Sign Up</a></p>
+    <h1 class="text-center">Login</h1>
+    <hr>
 
-            </form>
-        </div>
+    <!-- google and facebook -->
+    <div class="card card-body social-card">
+        <a class="btn btn-social btn-facebook btn-block text-light" href="/auth/facebook" role="button">
+            <i class="fab fa-facebook"></i>
+            Sign In with Facebook
+        </a>
     </div>
-    <%- include ("partials/footer") %> 
+    <!-- google and facebook -->
+
+    <h3 class="text-center">OR</h3>
+
+    <div class="row">
+        <form action="/login" method="post" class="register-form">
+            <div class="col-lg-10 col-md-10">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" placeholder="username">
+                </div>
+            </div>
+
+            <div class="col-lg-10 col-md-10">
+                <div class="form-group">
+                    <input class="form-control form-control-md" name="password" type="password" placeholder="password">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" style="margin-top: 10px;">Login</button>
+
+            <p style="padding-top: 10px;">Dont Have An Account? <a href="/register">Sign Up</a></p>
+
+        </form>
+    </div>
+</div>
+<%- include ("partials/footer") %>
