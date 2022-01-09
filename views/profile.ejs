@@ -1,0 +1,32 @@
+<%- include("partials/header") %> 
+<%- include("partials/usernav") %> 
+
+
+<style>
+    .container{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10em;
+    }
+</style>
+<div class="container">
+<div class="card" style="width: 25rem; text-align:center;">
+    <div class="card-body">
+        <img src="https://www.kindpng.com/picc/m/78-785827_user-profile-avatar-login-account-male-user-icon.png" style="height: 7rem; border-radius:4rem" alt="">
+      <h5 class="card-title"><%= currentUser.username %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= currentUser.useremail %></h6>
+      <p class="card-text">Hello <%= currentUser.username %> this is your Profile </p>
+      <a href="#" class="#"><%= currentUser.phoneno %> </a>
+      <div>
+        <a href="" class="btn btn-warning btn-sm" style="width: 10rem; margin-top:10px;">Edit</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+ 
+ 
+
+<%- include("partials/footer") %> 

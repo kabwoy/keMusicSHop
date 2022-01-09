@@ -2,18 +2,38 @@
 
 <!-- navbar -->
 <% if(!currentUser){ %>
-    <%- include ("partials/noneusernav") %>
-    <% } else { %>
-    <%- include ("partials/usernav") %>
-    <% } %>
-    <!-- /navbar -->
+<%- include ("partials/noneusernav") %>
+<% } else { %>
+<%- include ("partials/usernav") %>
+<% } %>
+<!-- /navbar -->
 
 <div class="container">
-    <!-- search engine -->
-    <div class="col-lg-8">
-        <%- include ("partials/searchengine") %>
+    <div class="row">
+        <!-- search engine -->
+        <div class="col-lg-8">
+            <%- include ("partials/searchengine") %>
+        </div>
+        <!-- search engine -->
+
+        <% if(!currentUser){ %>
+        <div class="col"></div>
+        <% } else { %>
+        <div class="col">
+            <!-- upload dropdown -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Upload
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/uploadalbum">Album</a></li>
+                    <li><a class="dropdown-item" href="/uploadsong">Song</a></li>
+                </ul>
+            </div>
+        </div>
+        <% } %>
     </div>
-    <!-- search engine -->
 
     <br>
     <!-- product rows and columns -->

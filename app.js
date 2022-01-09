@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
+var User = require("./models/user")
 // const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
 const findOrCreate = require('mongoose-findorcreate');
@@ -30,22 +31,7 @@ app.use(passport.session());
 
 mongoose.connect("mongodb://localhost:27017/keMusicDB"); //monngose connection
 
-// schemas
-const userSchema = new mongoose.Schema({
-    username: String,
-    useremail: String,
-    password: String,
-    phoneno: String,
-    googleId: String,
-    facebookId: String,
 
-});
-
-// passport plugin
-userSchema.plugin(passportLocalMongoose);
-userSchema.plugin(findOrCreate);
-
-const User = mongoose.model("User", userSchema) //mongoose model
 
 passport.use(User.createStrategy());
 
@@ -199,13 +185,42 @@ app.get("/logout", function (req, res) {
 // logout route
 
 app.get("/uploadalbum", (req, res) => {
-
-    res.render("uploadalbum")
+    User.find({}, function(err, foundUsers){
+        if(err){
+            console.log(err)
+        } else {
+            res.render("uploadalbum", {
+                foundUsers: foundUsers,
+                currentUser: req.user
+            })
+        }
+    })
 })
 
 app.get("/uploadsong", (req, res) => {
+    User.find({}, function(err, foundUsers){
+        if(err){
+            console.log(err)
+        } else {
+            res.render("uploadsong", {
+                foundUsers: foundUsers,
+                currentUser: req.user
+            })
+        }
+    })
+})
+app.get("/:id", (req,res)=>{
 
-    res.render("uploadsong")
+    User.findById(req.params.id, function(err, foundUser){
+
+        if(err){
+
+            console.log(err)
+        }else{
+
+            res.render("profile", {currentUser:foundUser})
+        }
+    })
 })
 
 
